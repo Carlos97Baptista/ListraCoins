@@ -3,8 +3,8 @@ import React, { ReactElement, createContext, useState } from 'react';
 export const AuthContext = createContext({});
 
 function AuthProvider({ children }: any) {
-    const [user, setUser] = useState({ email: "batata@gmail.com", loged: true, name: "Sr Batata", })
-    const [points, setPrice] = useState(1000)
+    const [user, setUser] = useState({ email: "batata@gmail.com", loged: false, name: "Sr Batata", })
+    const [points, setPrice] = useState(10000)
     const siginIn = ({ password, email }: any) => {
         if (email == "batata@gmail.com" && password == "qwe123") {
             setUser({ email: email, loged: true })
